@@ -1,0 +1,8 @@
+<div *ngIf="item.validations && item.validations.length>0">
+<span *ngFor="let validation of item.validations;">
+  <small class="form-text text-muted danger"
+         *ngIf="validation &&(fg.get(item.adi).hasError(validation.adi) && (fg.get(item.adi).dirty || fg.get(item.adi).touched)) ">
+    {{validation.mesaj}}
+  </small>
+</span>
+</div>

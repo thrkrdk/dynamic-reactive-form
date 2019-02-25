@@ -1,0 +1,15 @@
+<div [ngClass]="item.formGroupCssClass ?item.formGroupCssClass: 'form-group'"
+     [formGroup]="fg">
+  <label for="{{item.id}}">{{item.etiket}}</label>
+  <div class="position-relative">
+    <input  type="date"
+           id="{{item.id}}"
+           [ngClass]="item.itemCssClass?item.itemCssClass:'form-control'"
+           name="{{item.adi}}"
+           [formControlName]="item.adi">
+  </div>
+  <app-validation-display
+    [fg]="fg"
+    [item]="item"
+  ></app-validation-display>
+</div>

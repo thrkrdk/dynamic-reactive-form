@@ -7,7 +7,7 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display welcome mesaj', () => {
     page.navigateTo();
     expect(page.getTitleText()).toEqual('Welcome to dynamic-reactive-form!');
   });

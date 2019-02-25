@@ -1,0 +1,12 @@
+<div [ngClass]="item.formGroupCssClass ?item.formGroupCssClass: 'form-group'" [formGroup]="fg">
+  <div class="form-actions right">
+    <button
+      id="{{item.id}}"
+      [type]="item.itemTipi?item.itemTipi: 'button'"
+      id="btn_{{item.adi}}"
+      [ngClass]="item.itemCssClass? item.itemCssClass: 'btn btn-raised btn-success'"
+      [disabled]="item.validationKontol && !fg.valid" >
+      <i class="fa fa-check-square-o"></i> {{item.etiket}}
+    </button>
+  </div>
+</div>

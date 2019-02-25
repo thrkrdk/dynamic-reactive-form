@@ -1,0 +1,10 @@
+<form class="app-dynamic-reactive-form"
+      [formGroup]="form"
+      (ngSubmit)="onSubmit($event)">
+  <ng-container
+    *ngFor="let item of items;"
+    appDynamicItem
+    [item]="item"
+    [fg]="form">
+  </ng-container>
+</form>

@@ -1,0 +1,16 @@
+<div [ngClass]="item.formGroupCssClass ?item.formGroupCssClass: 'form-group'" [formGroup]="fg">
+  <label
+    for="{{item.id}}">{{item.etiket}}</label>
+  <input [type]="item.itemTipi"
+         id="{{item.id}}"
+         [ngClass]="item.itemCssClass?item.itemCssClass:'form-control'"
+         placeholder="{{item.etiket}}"
+         [readonly]="item.readonly"
+         (value)="item.deger?item.deger:undefined"
+         [formControlName]="item.adi">
+  <app-validation-display
+    [fg]="fg"
+    [item]="item"
+  ></app-validation-display>
+
+</div>

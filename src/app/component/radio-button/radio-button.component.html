@@ -1,0 +1,18 @@
+<div [ngClass]="item.formGroupCssClass ?item.formGroupCssClass: 'form-group'" [formGroup]="fg">
+  <label>{{item.etiket}}</label>
+  <div *ngFor="let itm of item.options; let i = index;"
+       [ngClass]="item.itemCssClass?item.itemCssClass:'custom-control custom-radio display-inline-block'">
+    <input type="radio"
+           formControlName="{{item.adi}}"
+           id="radio{{i}}"
+           [value]=itm class="custom-control-input">
+    <label class="custom-control-label"
+           for="radio{{i}}">
+      {{itm}}
+    </label>
+  </div>
+  <app-validation-display
+    [fg]="fg"
+    [item]="item"
+  ></app-validation-display>
+</div>

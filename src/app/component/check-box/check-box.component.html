@@ -1,0 +1,19 @@
+<div [ngClass]="item.formGroupCssClass ?item.formGroupCssClass: 'form-group'" [formGroup]="fg">
+  <div [ngClass]="item.itemCssClass ? item.itemCssClass:'custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0'">
+    <input
+      type="checkbox"
+      class="custom-control-input"
+      [checked]="item.deger"
+      id="{{item.id}}"
+      [formControlName]="item.adi">
+    <label
+      class="custom-control-label"
+      for="{{item.id}}">
+      {{item.etiket}}
+    </label>
+  </div>
+  <app-validation-display
+    [fg]="fg"
+    [item]="item"
+  ></app-validation-display>
+</div>
